@@ -1,6 +1,5 @@
 import { SinkRepair } from "./SinkRepair.js"
-import { fetchRequests } from "./dataAccess.js"
-import { fetchPlumbers } from "./dataAccess.js"
+import { fetchRequests, fetchPlumbers  } from "./dataAccess.js"
 
 
 const mainContainer = document.querySelector("#container")

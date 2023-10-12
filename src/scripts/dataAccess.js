@@ -1,5 +1,6 @@
 const applicationState = {
-requests: []
+    requests: [],
+    plumbers: []
 }
 
 const API = "http://localhost:8088"
@@ -15,9 +16,7 @@ export const fetchRequests = () => {
         )
 }
 
-export const  getRequests = () => {
-    return applicationState.requests.map(request => ({...request}))
-}
+
 
 export const sendRequest = (userServiceRequest) => {
     const fetchOptions = {
@@ -46,6 +45,17 @@ export const fetchPlumbers = () => {
         )
 }
 
+//get functions below
+export const  getRequests = () => {
+    return applicationState.requests.map(request => ({...request}))
+}
+
+export const getPlumbers = () => {
+    return applicationState.plumbers.map(plumber => ({...plumber}))
+}
+
+
+//delete request below
 export const deleteRequest = (id) => {
     return fetch(`${API}/requests/${id}`, { method: "DELETE" })
         .then(

@@ -1,26 +1,28 @@
-import { getRequests } from "./dataAccess.js"
+import { getRequests, getPlumbers } from "./dataAccess.js"
 
 export const Requests = () => {
     const requests = getRequests()
-
+    const plumbers = getPlumbers()
+    console.log(plumbers)
     const convertRequestToListElement = (request) => {
-    // let  html = ""
-        // for (const request of requests) {
-            // html += 
-        // }
-        return `<li value="${request.id}">${request.description}</li>`
-    }
+        
 
+        return `<li value="${request.id}">${request.description}
+        <select id="plumbers">
+        <option value="0">Choose</option>
+        ${plumbers.map(plumber => `<option value='${request.id}--${plumber.id}'>${plumber.name}</option>`).join("")}
+        </select>
+        <button class="request__delete"
+        id="request--${request.id}">Delete</button></li>`
+    }
     let html = `
         <ul>
             ${
-                // requests.map(convertRequestToListElement).join("")
-                requests.map(singleRequest => `<li value="${singleRequest.id}">${singleRequest.description}</li>`).join("")
+                requests.map(convertRequestToListElement).join("")
             }
         </ul>
     `
-
-
+            console.log(html)
     return html
 }
 
