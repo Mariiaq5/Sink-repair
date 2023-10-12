@@ -1,0 +1,59 @@
+{
+  "plumbers": [
+    {
+      "id": 1,
+      "name": "Maude"
+    },
+    {
+      "id": 2,
+      "name": "Merle"
+    }
+  ],
+  "completions": [],
+  "requests": [
+    {
+      "id": 1,
+      "description": "Aut sint voluptatem fugit eius quas molestiae modi.",
+      "address": "34445 Bianka Ports",
+      "budget": 400,
+      "neededBy": "2021-08-27",
+      "phone": "304-656-3062",
+      "approve": true,
+      "plumber": 1
+    },
+    {
+      "id": 2,
+      "description": "Clogged drains",
+      "address": "1243 Joker light",
+      "budget": 578,
+      "neededBy": "2021-10-14",
+      "phone": "304-723-0555",
+      "approve": true,
+      "plumber": 1
+    },
+    {
+      "id": 3,
+      "description": "Low water pressure and gurgling",
+      "address": "6661 Monster cereal",
+      "budget": 666,
+      "neededBy": "2021-10-16",
+      "phone": "304-656-6066",
+      "approve": true,
+      "plumber": 2
+    },
+    {
+      "description": "Kitchen sink",
+      "address": "666 Demon's Avenue ",
+      "budget": "333",
+      "neededBy": "2023-10-16",
+      "id": 4
+    },
+    {
+      "description": "Water everywhere, FOUNTAIN!",
+      "address": "0101 Funny Street",
+      "budget": "457",
+      "neededBy": "2023-10-13",
+      "id": 5
+    }
+  ]
+}

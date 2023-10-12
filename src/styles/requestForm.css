@@ -1,0 +1,15 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: large;
+    font-weight: 900;
+    margin-top: 1em;
+}
+
+#submitRequest {
+    background-color: blue;
+    color: antiquewhite;
+    font-size: large;
+    margin-top: 1em;
+}

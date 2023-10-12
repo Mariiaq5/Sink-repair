@@ -1,0 +1,29 @@
+/* @import "requestForm.css"; */
+@import url(./requestForm.css);
+/*@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");*/
+@font-face {
+	font-family: "Montreau-Regular";
+	src: url(/sink-repair/fonts/Montreau-Regular.ttf);
+}
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: "Montreau-Regular";
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Montreau-Regular";
+  letter-spacing: 2px;
+}
+
+h1 {
+	text-align: center;
+}
