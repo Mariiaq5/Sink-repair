@@ -1,4 +1,4 @@
-import { getRequests, getPlumbers } from "./dataAccess.js"
+import { getRequests, getPlumbers, saveCompletion  } from "./dataAccess.js"
 
 export const Requests = () => {
     const requests = getRequests()
@@ -53,7 +53,9 @@ mainContainer.addEventListener(
     "change",
     (event) => {
         if (event.target.id === "plumbers") {
-            const [requestId, plumberId] = event.target.value.split("--")
+            const [requestId, plumberId] = event.target.value.split("--");
+            const monthDayYear = new Date()
+            const date_created = monthDayYear.toDateString();
 
             /*
                 This object should have 3 properties
@@ -61,7 +63,8 @@ mainContainer.addEventListener(
                    2. plumberId
                    3. date_created
             */
-            const completion = { }
+            const completion = {requestId, plumberId, date_created}
+            console.log(completion)
 
             /*
                 Invoke the function that performs the POST request
@@ -69,6 +72,13 @@ mainContainer.addEventListener(
                 completion object as a parameter.
              */
 
+            saveCompletion(completion)
+
         }
     }
 )
+
+
+
+
+
