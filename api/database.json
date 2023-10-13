@@ -7,9 +7,41 @@
     {
       "id": 2,
       "name": "Merle"
+    },
+    {
+      "id": 3,
+      "name": "Jeff"
     }
   ],
-  "completions": [],
+  "completions": [
+    {
+      "requestId": "4",
+      "plumberId": "2",
+      "id": 1
+    },
+    {
+      "requestId": "5",
+      "plumberId": "1",
+      "id": 2
+    },
+    {
+      "requestId": "4",
+      "plumberId": "2",
+      "id": 3
+    },
+    {
+      "requestId": "5",
+      "plumberId": "2",
+      "monthDayYear": "Fri Oct 13 2023",
+      "id": 4
+    },
+    {
+      "requestId": "2",
+      "plumberId": "1",
+      "date_created": "Fri Oct 13 2023",
+      "id": 5
+    }
+  ],
   "requests": [
     {
       "id": 1,

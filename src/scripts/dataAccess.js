@@ -1,5 +1,6 @@
 const applicationState = {
     requests: [],
+    completions: [],
     plumbers: []
 }
 
@@ -35,6 +36,24 @@ export const sendRequest = (userServiceRequest) => {
         })
 }
 
+export const saveCompletion = (completion) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(completion)
+    }
+
+    return fetch(`${API}/completions`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+        })
+}
+
+
+
 export const fetchPlumbers = () => {
     return fetch(`${API}/plumbers`)
         .then(response => response.json())
@@ -65,5 +84,7 @@ export const deleteRequest = (id) => {
         )
 }
 
-// saveCompletion()
-//fetchCompletions()
+
+const fetchCompletions = () => {
+
+}
